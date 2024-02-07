@@ -55,9 +55,8 @@ def inference(image, size):
     return result
 
 
-title = "Face Real ESRGAN UpScale: 2x 4x 8x"
-description = "This is an unofficial demo for Real-ESRGAN. Scales the resolution of a photo. This model shows better results on faces compared to the original version.<br>Telegram BOT: https://t.me/restoration_photo_bot"
-article = "<div style='text-align: center;'>Twitter <a href='https://twitter.com/DoEvent' target='_blank'>Max Skobeev</a> | <a href='https://huggingface.co/sberbank-ai/Real-ESRGAN' target='_blank'>Model card</a><div>"
+title = "Real ESRGAN UpScale Webui: 2x 4x 8x"
+description = "这是 Real-ESRGAN 的非官方演示。 缩放照片的分辨率。 与原始版本相比，该模型在面部上显示出更好的结果 | <a href='https://huggingface.co/sberbank-ai/Real-ESRGAN' target='_blank'>Model card</a><div>"
 
 
 gr.Interface(inference,
@@ -73,5 +72,5 @@ gr.Interface(inference,
     examples=[['groot.jpeg', "2x"]],
     allow_flagging='never',
     cache_examples=False,
-    ).queue(api_open=False).launch(show_error=True, show_api=False)
+    ).queue(api_open=False).launch(show_error=True, show_api=False, share=True)
     
